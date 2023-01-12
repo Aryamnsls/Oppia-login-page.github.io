@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html ng-app="oppia" itemscope itemtype="http://schema.org/Organization">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta name="description" content="Learn any subject through free and interactive lessons in easy-to-follow language. Oppia provides a step-by-step learning process to master any skills you want.">
+    <meta itemprop="name" content="Personalized Online Learning from Oppia">
+    <meta itemprop="description" content="Oppia is a free, open-source learning platform. Join the community to create or try an exploration today!">
+    <!-- The og tags are for Facebook sharing. -->
+    <meta property="og:title" content="Personalized Online Learning from Oppia">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Oppia">
+    <meta property="og:description" content="Oppia is a free, open-source learning platform. Join the community to create or try an exploration today!">
+
+    <link rel="apple-touch-icon" href="/assets/images/logo/favicon.png">
+    <title itemprop="name">Learner Dashboard | Oppia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
+
+    <link rel="preload" href="/third_party/generated/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/third_party/generated/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" media="screen" href="https://fonts.googleapis.com/css2?family=Capriola&family=Roboto:wght@400;500;700&family=Noto+Serif:ital@0;1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="preload" media="screen" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+    <link rel="preload" href="/third_party/generated/css/third_party.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="preload" href="/third_party/static/bower-material-1.1.19/angular-material.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/templates/css/oppia.css">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/templates/css/oppia-material.css">
+
+
+
+    <!-- This code is used for inserting webpack bundles
+    https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates -->
+
+    <link rel="preload" as="script" href="/build/webpack_bundles/runtime.444e9b821cd92d1e45e7.bundle.js">
+
+    <link rel="preload" as="script" href="/build/webpack_bundles/0.399f2e030724d9ef1815.bundle.js">
+
+    <link rel="preload" as="script" href="/build/webpack_bundles/1.11614ce3c753dc94c9b2.bundle.js">
+
+    <link rel="preload" as="script" href="/build/webpack_bundles/learner_dashboard.c26b3b48f8652f39a869.bundle.js">
+
+
+
+    <script src="/third_party/static/jquery-3.5.1/jquery.min.js"></script>
+    <script src="/third_party/static/jqueryui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/third_party/static/jquery-ui-touch-punch-0.3.1/jquery.ui.touch-punch-improved.js"></script>
+
+
+
+    <script src="/third_party/static/angularjs-1.8.2/angular.min.js"></script>
+
+
+
+    <script>
+        // This prevents angular pages to cause side effects to hybrid pages.
+        // TODO(#13080): Remove fake resumeBootstrap once angularjs is removed
+        // from this page.
+        if (!window.angular.resumeBootstrap) {
+            window.angular.resumeBootstrap = function(extraModules) {};
+        }
+    </script>
+</head>
+
+<body>
+    <oppia-root>
+        <div ng-controller="Base" dir="<[direction]>">
+            <oppia-base-content>
+                <navbar-breadcrumb>
+                    <ul class="nav navbar-nav oppia-navbar-breadcrumb">
+                        <li>
+                            <span class="oppia-navbar-breadcrumb-separator"></span>
+                            <span translate="I18N_TOPNAV_LEARNER_DASHBOARD"></span>
+                        </li>
+                    </ul>
+                </navbar-breadcrumb>
+
+                <content>
+                    <oppia-learner-dashboard-page class="e2e-test-learner-dashboard-page"></oppia-learner-dashboard-page>
+                </content>
+
+                <page-footer></page-footer>
+            </oppia-base-content>
+        </div>
+
+    </oppia-root>
+    <noscript>
+  <div class="oppia-page-cards-container">
+    <div class="md-default-theme oppia-page-card oppia-long-text">
+      <!-- Note to developers: We replicate the translated text inline because, without JavaScript enabled, the translation engine doesn't kick in.-->
+      <h2>
+        <span translate="I18N_SPLASH_JAVASCRIPT_ERROR_TITLE">We Need JavaScript in Your Browser</span>
+        <i class="material-icons">&#xE811;</i>
+      </h2>
+      <p translate="I18N_SPLASH_JAVASCRIPT_ERROR_DESCRIPTION" translate-values="{hrefUrl: 'http://www.enable-javascript.com/'}">
+        Oppia is a free, open-source learning platform full of interactive activities called
+        'explorations'. Sadly, Oppia requires JavaScript to be enabled in your web browser in
+        order to function properly and your web browser has JavaScript disabled. If you need
+        help enabling JavaScript, <a href="http://www.enable-javascript.com">click here.</a>
+      </p>
+      <p translate="I18N_SPLASH_JAVASCRIPT_ERROR_THANKS">Thank you.</p>
+    </div>
+  </div>
+</noscript>
+
+
+    <!-- This code is used for inserting webpack bundles
+    https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates -->
+
+    <script src="/build/webpack_bundles/runtime.444e9b821cd92d1e45e7.bundle.js"></script>
+
+    <script src="/build/webpack_bundles/0.399f2e030724d9ef1815.bundle.js"></script>
+
+    <script src="/build/webpack_bundles/1.11614ce3c753dc94c9b2.bundle.js"></script>
+
+    <script src="/build/webpack_bundles/learner_dashboard.c26b3b48f8652f39a869.bundle.js"></script>
+
+
+    <script>
+        // Here we look for statically inserted CSS bundles and transform them to RTL
+        // version depending on key-value stored on the local storage.
+        let linkHrefs = [
+
+            "/build/webpack_bundles/0.fa99e0f808abff74f2d7.css",
+
+            "/build/webpack_bundles/29.4938c06c24297023b130.css",
+
+        ];
+        let rtl = localStorage.getItem('direction') === 'rtl';
+        for (let linkHref of linkHrefs) {
+            if (rtl) {
+                linkHref = linkHref.replace('.css', '.rtl.css');
+            }
+            let cssLink = document.createElement('link');
+            cssLink.rel = 'stylesheet';
+            cssLink.href = linkHref;
+            document.head.appendChild(cssLink);
+        }
+    </script>
+
+
+
+    <script src="/third_party/generated/js/third_party.min.js"></script>
+
+
+    <script>
+        // Use the normal default browser eventlistener without passive
+        // set to false.
+        // TODO(#10749): Remove workaround for passive event listeners when
+        // jQuery supports it.
+        EventTarget.prototype.addEventListener = (
+            EventTarget.prototype.addEventListener._original);
+    </script>
+</body>
+
+</html>
